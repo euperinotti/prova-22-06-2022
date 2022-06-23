@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3 - Pfeffer</title>
+</head>
+<body>
+    <script>
+        /* 3) Crie um algoritmo para calcular os sete primeiros temos da 
+        série de fibonacci, sendo que o 1° e o 2o termos valem 1 (1 1 2 3 5 8 13 21 35 ...). 
+        Apresentar na tela o resultado. Cada termo da série é o resultado da soma dos seus dois antecedentes.*/
+
+        function fibonacci(num) {
+            //caso o num seja menor que dois, retorne ele
+            if(num < 2) {
+            return num;
+        } else {
+            //caso contrario, retorne a soma do num-1 com num-2
+            return fibonacci(num - 1) + fibonacci(num - 2);
+            //ex: num=8; retorna (8-1) + (8-2)
+        }
+    }
+        //variavel para armazenar os resultados 
+        let resultado = [];
+
+        //laço para executar a funcao do fibonacci, onde o i serve como parametro
+        for(let i = 1; i < 8; i++) {
+            //insere o resultado de fibonacci no array do resultado
+            resultado.push(fibonacci(i));
+    }
+        //insere uma seta entre os valores de cada item do array
+        //.join() substitui as virgulas que separam os itens do array por uma string
+        alert(resultado.join(" → "));
+    </script>
+</body>
+</html>

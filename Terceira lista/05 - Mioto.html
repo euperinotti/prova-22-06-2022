@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 5 - Mioto</title>
+  </head>
+  <body>
+    <script>
+      /* 5) Elaborar um algoritmo que Efetue o cálculo e faça a
+      apresentação do valor de uma prestação em atraso, utilizando a fórmula:
+      PRESTACAO: = VALOR + (VALOR *(TAXA/100)*TEMPO). */
+
+      let fValor = "";
+      let fTaxa = "";
+      let fTempo = "";
+      let fPrestacao = "";
+
+      function Prestacao() {
+        //formula da prestacao
+        fPrestacao = fValor + fValor * (fTaxa / 100) * fTempo;
+      }
+
+      do {
+        //enquando o valor for nao definido
+        //peça para o usuario inserir um valor
+        fValor = parseFloat(window.prompt("Digite o valor base da prestação."));
+      } while (isNaN(fValor));
+
+      do {
+        //enquanto a taxa for nao definida
+        //peças para o usuario inserir o valor da taxa
+        fTaxa = parseFloat(window.prompt("Digite a taxa da prestação."));
+      } while (isNaN(fTaxa));
+
+      do {
+        //enquanto o tempo for nao definido
+        //peça para o usuario informar o tempo de atraso
+        fTempo = parseFloat(
+          window.prompt("Digite a quantidade de tempo do atraso.")
+        );
+      } while (isNaN(fTempo));
+
+      Prestacao();
+      window.alert(`O valor da prestação em atraso é R$${fPrestacao}.`);
+    </script>
+  </body>
+</html>

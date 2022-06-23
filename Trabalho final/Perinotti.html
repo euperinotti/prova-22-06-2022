@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho final - Perinotti</title>
+</head>
+<body>
+
+    <script>
+        function operadores(){
+            let opcao = prompt("Escolha a operação a ser realizada\n +, -, *, /");
+            let valor1 = parseInt(prompt("Digite o primeiro valor"));
+            let valor2 = parseInt(prompt("Digite o segundo valor"));
+
+            function soma(valor1, valor2){
+                return valor1 + valor2;
+            }
+
+            function subtracao(valor1, valor2){
+                return valor1 - valor2;
+            }
+
+            function multiplicacao(valor1, valor2){
+                return valor1 * valor2;
+            }
+
+            function divisao(valor1, valor2){
+
+                if(valor1 == 0 || valor2 == 0){
+                    alert("Não é possivel realizar divisão por 0");
+                    operadores();
+                }else{
+                    return valor1/valor2;
+                }
+            }
+
+            switch(opcao){
+                case "+":
+                alert(`O resultado da soma de ${valor1} + ${valor2} é \n ${soma(valor1,valor2)}`);
+                if(confirm("Deseja realizar outra operação?")){
+                    operadores();
+                }
+                break;
+
+                case "-":
+                alert(`O resultado da subtracao de ${valor1} - ${valor2} é \n ${subtracao(valor1,valor2)}`);
+                if(confirm("Deseja realizar outra operação?")){
+                    operadores();
+                }
+                break;
+
+                case "*":
+                alert(`O resultado da multiplicaçãp de ${valor1} * ${valor2} é \n ${multiplicacao(valor1,valor2)}`);
+                if(confirm("Deseja realizar outra operação?")){
+                    operadores();
+                }
+                break;
+
+                case "/":
+                alert(`O resultado da divisao de ${valor1} / ${valor2} é \n ${divisao(valor1,valor2)}`);
+                if(confirm("Deseja realizar outra operação?")){
+                    operadores();
+                }
+                break;
+            }
+        }
+
+        operadores();
+    </script>
+    
+</body>
+</html>

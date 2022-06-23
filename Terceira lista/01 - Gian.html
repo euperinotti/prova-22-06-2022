@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 1 - Gian</title>
+  </head>
+  <body>
+    <script>
+      /* Fazer um algoritmo que calcule e escreva o fatorial de 6
+      (utilizem recursividade) */
+      var numero = 6;
+
+      function fatorialDowhile() {
+        let arr = [];
+        let contador = 1;
+        let resultado = 1;
+        do {
+          resultado *= contador;
+          contador++;
+          arr.push(resultado);
+        } while (contador <= numero);
+        console.log(numero + "! = " + resultado);
+      }
+      fatorialDowhile();
+    </script>
+  </body>
+</html>

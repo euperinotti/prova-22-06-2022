@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 1 - Gian</title>
+  </head>
+  <body>
+    <script>
+      /* 1) Sabendo-se que cada pessoa consome em média 15 salgadinhos, 10 doces e meio litro de refrigerante, 
+      faça um algoritmo que calcule o custo total de uma festa. 
+      O programa deverá ler: 
+      a quantidade de pessoas convidadas, o valor de um cento de salgados, o valor da garrafa de 2 litros de refrigerante e de um cento de doces. Ao final o algoritmo deverá escrever: As quantidade e valores totais de salgados, doces e refrigerantes, bem como o custo total da festa. */
+      let qtdpessoas = prompt("Quantas pessoas vão na festa?");
+      let valorsalgado = prompt("Quanto custa a centena do salgado?");
+      let valordoce = prompt("Quanto custa a centena do doce°");
+      let litrao = prompt("Quanto custa 2 litros de refri?");
+
+      function howmuch() {
+        const mediasalgado = 15;
+        const mediadoce = 10;
+        const medialitro = 0.5;
+        const salgadototal = qtdpessoas * mediasalgado; //quantidade de salgados a ser comprado
+        const docetotal = qtdpessoas * mediadoce; //quantidade de doces a ser comprado
+        const litrototal = qtdpessoas * medialitro; //quantidade de litros a ser comprado
+        var calculosal = (salgadototal / 100) * valorsalgado; //custo total dos salgados
+        var calculodoce = (docetotal / 100) * valordoce; //custo total dos doces
+        var calculolitrao = (litrototal / 2) * litrao; //custo total do refrigerante
+        var calculofinal = calculosal + calculodoce + calculolitrao; //custo de tudo
+        document.write(
+          `Você vai precisar de ${salgadototal} salgadinhos, que vai custar ${calculosal}, ${litrototal} litros de refri vai custar ${calculolitrao}, e ${docetotal} docinhos vai custar ${calculodoce}. A festa no total vai custar ${calculofinal}`
+        );
+      }
+
+      howmuch();
+    </script>
+  </body>
+</html>
